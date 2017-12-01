@@ -1,0 +1,168 @@
+.footer-row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #30455b;
+  padding: 1.3rem 0;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: auto;
+  max-width: 35.75rem; }
+
+.footer-menu {
+  -webkit-flex-basis: 60%;
+  -ms-flex-preferred-size: 60%;
+  flex-basis: 60%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-bottom: 1.3rem; }
+
+.footer-link {
+  -webkit-flex-basis: 30%;
+  -ms-flex-preferred-size: 30%;
+  flex-basis: 30%;
+  font-size: 0.8rem;
+  font-family: "Pathway Gothic One";
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  color: white;
+  margin-bottom: 1rem;
+  text-transform: uppercase; }
+  .footer-link:hover {
+    color: white; }
+
+.footer-link:nth-child(n+4) {
+  margin: 0; }
+
+.footer-contact {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+
+.footer__number {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 0.5625rem;
+  font-family: Arial;
+  color: white; }
+
+.info-title {
+  font-size: 1rem;
+  font-family: "Pathway Gothic One";
+  color: white;
+  font-weight: 400; }
+
+.number::before {
+  display: block;
+  margin-right: 0.3rem;
+  width: 0.6rem;
+  height: 1rem;
+  content: '';
+  background-image: url(../img/telf.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; }
+
+.mail::before {
+  display: block;
+  margin-right: 0.3rem;
+  width: 1rem;
+  height: 0.8rem;
+  content: '';
+  background-image: url(../img/infodnt.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; }
+
+/*/////ICON//////*/
+.soc-icon {
+  margin: 0 auto;
+  max-width: 14rem; }
+
+.copyright {
+  margin-top: 1.4rem; }
+
+.copyright-text {
+  margin-top: 1.6rem;
+  font-size: 13px;
+  color: white;
+  text-align: center; }
+
+.socila-svg {
+  border-radius: 1rem;
+  width: 2.5rem;
+  height: 2.5rem; }
+
+.socila-svg:hover {
+  fill: white; }
+
+.social {
+  width: 14rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+
+@media screen and (min-width: 768px) {
+  .footer-menu {
+    margin: 0;
+    -webkit-box-pack: space-evenly;
+    -webkit-justify-content: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly; }
+  .footer-row {
+    max-width: 45rem; }
+  .header {
+    max-width: 45rem; }
+  .footer-contact {
+    display: block; }
+  .mail {
+    margin-top: 0.3rem; }
+  .footer__number {
+    font-size: 0.65rem; }
+  .number {
+    margin-top: 0.3rem; }
+  .footer-link {
+    font-size: 1rem; }
+  .number::before {
+    display: none; }
+  .mail::before {
+    display: none; } }
+
+@media screen and (min-width: 992px) {
+  .footer-row {
+    max-width: 60rem; } }

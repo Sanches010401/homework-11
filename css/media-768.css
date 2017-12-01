@@ -1,0 +1,12 @@
+ @media screen and (min-width: 768px) {
+  .title-two {
+    font-size: 1.8rem;
+  }
+.gallery-item:nth-child(n+7) {
+  display: flex;
+  margin-bottom: 0rem;
+}
+.gallery-item:nth-child(n+9) {
+  display: none;
+}
+}

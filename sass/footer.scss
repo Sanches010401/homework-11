@@ -1,0 +1,152 @@
+@function px-rem($rem){
+  $box: $rem / 16px;
+  @return #{$box}rem;
+}
+@mixin flex-settings($dflex: flex, $jcontent: space-between, $fwrap: wrap) {
+  display: $dflex;
+  justify-content: $jcontent;
+  flex-wrap: $fwrap;
+}
+@mixin font-settings($fsize,$ffamily) {
+font-size: $fsize;
+font-family: $ffamily;
+}
+@mixin link ($txtd:none, $txta:center,$display:block) {
+ text-decoration: $txtd;
+ text-align:$txta;
+ display:$display;
+}
+ @mixin background ($rep:no-repeat, $size:cover, $posit:center) {
+   background-repeat: $rep;
+   background-size: $size;
+   background-position: $posit;
+ }
+ .footer-row {
+   display: flex;
+   background-color: #30455b;
+   padding: 1.3rem 0;
+   justify-content: center;
+   margin: auto;
+   max-width: px-rem(572px);
+ }
+ .footer-menu {
+   flex-basis: 60%;
+   @include flex-settings() ;
+   margin-bottom: 1.3rem;
+ }
+ .footer-link {
+   flex-basis: 30%;
+   @include font-settings (0.8rem,'Pathway Gothic One')
+   @include link();
+   color: white;
+   margin-bottom: 1rem;
+   text-transform: uppercase;
+ &:hover {
+   color: white;
+ }
+}
+ .footer-link:nth-child(n+4) {
+   margin: 0;
+ }
+ .footer-contact {
+    @include flex-settings() ;
+ }
+ .footer__number {
+   display: flex;
+   align-items: center;
+   font-size: px-rem(9px);
+   font-family: Arial;
+   color: white;
+ }
+ .info-title {
+   @include font-settings (1rem ,'Pathway Gothic One')
+   color: white;
+   font-weight: 400;
+ }
+ .number::before {
+   display: block;
+   margin-right: 0.3rem;
+   width: 0.6rem;
+   height: 1rem;
+   content: '';
+   background-image: url(../img/telf.png);
+   @include background();
+ }
+ .mail::before {
+   display: block;
+   margin-right: 0.3rem;
+   width: px-rem(16px);
+   height: 0.8rem;
+   content: '';
+   background-image: url(../img/infodnt.png);
+   @include background();
+ }
+
+
+ /*/////ICON//////*/
+
+
+ .soc-icon {
+   margin: 0 auto;
+   max-width:14rem;
+ }
+ .copyright{
+   margin-top: 1.4rem;
+ }
+ .copyright-text {
+   margin-top: 1.6rem;
+   font-size: 13px;
+   color: white;
+   text-align: center;
+ }
+ .socila-svg {
+   border-radius: 1rem;
+   width: 2.5rem;
+   height: 2.5rem;
+ }
+ .socila-svg:hover {
+   fill: white;
+ }
+ .social {
+   width: 14rem;
+   @include flex-settings();
+ }
+
+ @media screen and (min-width: 768px){
+   .footer-menu {
+     margin: 0;
+     justify-content: space-evenly;
+   }
+   .footer-row {
+     max-width: px-rem(720px);
+   }
+   .header {
+     max-width: px-rem(720px);
+   }
+   .footer-contact {
+     display: block;
+   }
+   .mail {
+     margin-top: 0.3rem;
+   }
+   .footer__number {
+     font-size: 0.65rem;
+   }
+   .number {
+     margin-top: 0.3rem;
+   }
+   .footer-link {
+     font-size: 1rem;
+   }
+   .number::before {
+     display: none;
+   }
+   .mail::before {
+     display: none;
+   }
+ }
+ @media screen and (min-width: 992px) {
+   .footer-row {
+       max-width: 60rem;
+     }
+ }

@@ -1,0 +1,19 @@
+@media screen and (min-width: 992px) {
+  .gallery-item:nth-child(n+7) {
+    margin-bottom: 0rem;
+  }
+  .gallery-item:nth-child(6) {
+    margin-bottom: 2.5rem;
+  }
+  .gallery-item:nth-child(n+5) {
+    display: flex;
+  }
+  .body {
+    padding-top: 5rem;
+  }
+  .container {
+    padding-top: 4rem;
+  }
+  .title-two {
+    font-size: 2rem;
+  }

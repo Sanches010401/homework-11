@@ -1,0 +1,145 @@
+.header {
+  margin: auto;
+  position: relative;
+  margin-bottom: 2rem; }
+
+.logo {
+  height: 100%; }
+
+.box-logo {
+  margin: auto;
+  margin-bottom: 1.7rem;
+  width: 5.1875rem;
+  height: 5.1875rem;
+  border-radius: 50%;
+  background-color: white; }
+
+.logo-link:hover {
+  color: #263555; }
+
+.logo-link {
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  font-size: 2.4rem;
+  font-family: "Dorsa";
+  line-height: 5rem;
+  text-transform: uppercase;
+  color: #263555;
+  font-weight: 400; }
+
+.menu {
+  margin: auto;
+  width: 55%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+  .menu .menu-item {
+    position: relative;
+    -webkit-flex-basis: 33%;
+    -ms-flex-preferred-size: 33%;
+    flex-basis: 33%;
+    min-height: 2.125rem; }
+
+.menu-item:nth-child(n+3) {
+  min-height: 1rem; }
+
+.menu-item:hover .submenu {
+  display: block; }
+
+.menu-link {
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  font-family: "Pathway Gothic One";
+  line-height: 1.2rem;
+  color: white; }
+  .menu-link:hover {
+    color: #263555; }
+
+.submenu {
+  display: none;
+  position: absolute;
+  border-radius: 0.2rem;
+  top: 4.5rem;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  padding: 0.5rem;
+  text-align: right;
+  background-color: #f2f2f3;
+  z-index: 100; }
+  .submenu::before {
+    display: block;
+    position: absolute;
+    content: "";
+    width: 0.3125rem;
+    height: 0.625rem;
+    border-style: solid;
+    border-width: 0 2.5px 4.3px 2.5px;
+    border-color: transparent transparent #fefefe transparent;
+    top: -0.625rem;
+    left: 1.625rem; }
+
+.submenu-link {
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-family: "Pathway Gothic One";
+  line-height: 1.5rem;
+  color: #6b7488; }
+
+@media screen and (min-width: 768px) {
+  .menu {
+    width: 54%; }
+  .menu-link {
+    font-size: 1.5rem; }
+  .logo-link {
+    font-size: 2.8rem;
+    font-family: "Dorsa";
+    line-height: 6rem; }
+  .box-logo {
+    width: 6.25rem;
+    height: 6.25rem; } }
+
+@media screen and (min-width: 992px) {
+  .header {
+    max-width: 60rem;
+    position: relative;
+    margin-bottom: 5rem; }
+  .menu {
+    width: 84%;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap; }
+  .menu-link {
+    font-size: 1.8rem; }
+  .nearth-logo {
+    margin-right: 10rem; }
+  .logo-link {
+    font-size: 3.8rem;
+    font-family: "Dorsa";
+    line-height: 7.5rem; }
+  .box-logo {
+    position: absolute;
+    top: 31%;
+    left: 51%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 8rem;
+    height: 8rem;
+    margin-bottom: 0; } }

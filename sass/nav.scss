@@ -1,0 +1,150 @@
+@function px-rem($rem){
+  $box: $rem / 16px;
+  @return #{$box}rem;
+}
+@mixin flex-settings($dflex: flex, $jcontent: space-between, $fwrap: wrap) {
+  display: $dflex;
+  justify-content: $jcontent;
+  flex-wrap: $fwrap;
+}
+@mixin font-settings($fsize,$ffamily,$lheight) {
+font-size: $fsize;
+font-family: $ffamily;
+line-height: $lheight;
+}
+@mixin link ($txtd:none, $txta:center,$display:block){
+ text-decoration: $txtd;
+ text-align:$txta;
+ display:$display;
+ }
+$color:#263555;
+
+
+
+.header {
+ margin: auto;
+ position: relative;
+ margin-bottom: px-rem(32px);
+}
+.logo  {
+  height: 100%;
+}
+.box-logo {
+  margin: auto;
+  margin-bottom: 1.7rem;
+  width: px-rem(83px);
+  height: px-rem(83px);
+  border-radius: 50%;
+  background-color: white;
+}
+.logo-link:hover {
+  color: $color;
+}
+.logo-link {
+  @include link();
+  @include font-settings(2.4rem,'Dorsa',5rem);
+  text-transform: uppercase;
+  color: $color;
+  font-weight: 400;
+}
+.menu {
+  margin: auto;
+  width: 55%;
+  @include flex-settings();
+  .menu-item {
+    position: relative;
+    flex-basis: 33%;
+    min-height: px-rem(34px);
+  }
+}
+.menu-item:nth-child(n+3)  {
+  min-height: 1rem;
+}
+.menu-item:hover .submenu {
+  display: block;
+}
+.menu-link {
+  @include link();
+  text-transform: uppercase;
+  @include font-settings (1.3rem,'Pathway Gothic One',1.2rem );
+  color: white;
+ &:hover {
+  color: $color;
+}
+}
+.submenu {
+  display: none;
+  position: absolute;
+  border-radius: 0.2rem;
+  top: 4.5rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0.5rem;
+  text-align: right;
+  background-color: #f2f2f3;
+  z-index: 100;
+ &::before {
+  display:block;
+  position: absolute;
+    content: "";
+    width: px-rem(5px);
+    height: px-rem(10px);
+    border-style: solid;
+    border-width: 0 2.5px 4.3px 2.5px;
+    border-color: transparent transparent #fefefe transparent;
+    top: px-rem(-10px);
+    left: px-rem(26px);
+}
+}
+.submenu-link {
+  @include link();
+  text-transform: uppercase;
+  @include font-settings (1rem,'Pathway Gothic One',1.5rem );
+  color: #6b7488;
+}
+
+@media screen and (min-width: 768px)  {
+  .menu {
+    width: 54%;
+  }
+  .menu-link {
+    font-size: 1.5rem;
+  }
+  .logo-link {
+    @include font-settings (2.8rem,'Dorsa',6rem );
+  }
+  .box-logo {
+    width: px-rem(100px);
+    height: px-rem(100px);
+  }
+}
+@media screen and (min-width: 992px) {
+  .header {
+    max-width: 60rem;
+    position: relative;
+    margin-bottom: 5rem;
+  }
+  .menu {
+    width: 84%;
+    flex-wrap: nowrap;
+  }
+  .menu-link {
+    font-size: 1.8rem;
+  }
+  .nearth-logo {
+    margin-right: px-rem(160px);
+  }
+  .logo-link {
+    @include font-settings (3.8rem,'Dorsa',7.5rem );
+  }
+  .box-logo {
+    position: absolute;
+    top: 31%;
+    left: 51%;
+    transform: translate(-50%, -50%);
+    width: 8rem;
+    height: 8rem;
+    margin-bottom: 0;
+}
+
+}
